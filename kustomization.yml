@@ -1,0 +1,17 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+resources:
+  # Individual apps
+  - keycloakpoc-k8s/keycloakpoc-deployment.yml
+  - keycloakpoc-k8s/keycloakpoc-service.yml
+  - keycloakpoc-k8s/keycloakpoc-mariadb.yml
+  - keycloakpoc-k8s/keycloakpoc-prometheus-sm.yml
+  # monitoring prometheus
+  - monitoring-k8s/jhipster-prometheus-cr.yml
+  - monitoring-k8s/jhipster-prometheus-crd.yml
+  - monitoring-k8s/jhipster-grafana.yml
+  - monitoring-k8s/jhipster-grafana-dashboard.yml
+# service discovery eureka/consul
+
+patchesJson6902:
