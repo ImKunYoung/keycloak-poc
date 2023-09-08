@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083449",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "comment",
+  "fields": [
+    {
+      "fieldName": "voMember",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Comment",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "exhibition",
+      "otherEntityRelationshipName": "comments",
+      "relationshipName": "artwork",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

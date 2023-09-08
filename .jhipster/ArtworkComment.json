@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083945",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "artwork_comment",
+  "fields": [
+    {
+      "fieldName": "member",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArtworkComment",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "artwork",
+      "otherEntityRelationshipName": "artworkcomments",
+      "relationshipName": "artwork",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

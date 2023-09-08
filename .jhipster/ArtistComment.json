@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083752",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "artist_comment",
+  "fields": [
+    {
+      "fieldName": "voMember",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArtistComment",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "artist",
+      "otherEntityRelationshipName": "artistcomments",
+      "relationshipName": "artist",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

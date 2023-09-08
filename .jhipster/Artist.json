@@ -1,0 +1,68 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083751",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "artist",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "realName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imgUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "career",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voArtwork",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voMember",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "UPLOAD_PENDING,REVISION_PENDING,DELETE_PENDING,OK"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Artist",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "artistComment",
+      "otherEntityRelationshipName": "artist",
+      "relationshipName": "artistcomments",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "artistView",
+      "otherEntityRelationshipName": "artist",
+      "relationshipName": "artistviews",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "artistLike",
+      "otherEntityRelationshipName": "artist",
+      "relationshipName": "artistlikes",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

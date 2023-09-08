@@ -1,0 +1,45 @@
+entity Artwork {
+    title String,
+    shortDescription String,
+    longDescription String,
+    imageUrl String,
+    artistname String,
+    makingday String,
+    status Status,
+}
+
+entity ArtworkComment {
+    member Long,
+    content String,
+}
+
+entity ArtworkView {
+    member Long,
+}
+
+entity ArtworkLike {
+    member Long,
+}
+
+enum Status {
+    UPLOAD_PENDING, REVISION_PENDING, DELETE_PENDING, OK
+}
+
+
+relationship OneToMany {
+    Artwork{artworkcomments} to ArtworkComment{artwork}
+    Artwork{artworkviews} to ArtworkView{artwork}
+    Artwork{artworklikes} to ArtworkLike{artwork}
+}
+
+
+paginate ArtworkComment, ArtworkLike, ArtworkView with infinite-scroll
+paginate Artwork with pagination
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

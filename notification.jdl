@@ -1,0 +1,18 @@
+entity Notification {
+    date Instant required
+    details String
+    sentDate Instant required
+    format NotificationType required
+    userId Long required
+    productId Long required
+}
+
+enum NotificationType {
+    EMAIL, SMS, PARCEL
+}
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

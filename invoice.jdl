@@ -1,0 +1,36 @@
+entity Invoice {
+    code String required
+    date Instant required
+    details String
+    status InvoiceStatus required
+    paymentMethod PaymentMethod required
+    paymentDate Instant required
+    paymentAmount BigDecimal required
+}
+
+enum InvoiceStatus {
+    PAID, ISSUED, CANCELLED
+}
+
+entity Shipment {
+    trackingCode String
+    date Instant required
+    details String
+}
+
+enum PaymentMethod {
+    CREDIT_CARD, CASH_ON_DELIVERY, PAYPAL
+}
+
+relationship OneToMany {
+    Invoice{shipment} to Shipment{invoice(code) required}
+}
+
+paginate Invoice, Shipment with pagination
+
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

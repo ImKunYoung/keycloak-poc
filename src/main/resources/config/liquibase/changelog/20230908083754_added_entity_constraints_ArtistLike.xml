@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity ArtistLike.
+    -->
+    <changeSet id="20230908083754-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="artist_id"
+                                 baseTableName="artist_like"
+                                 constraintName="fk_artist_like__artist_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="artist"/>
+    </changeSet>
+</databaseChangeLog>

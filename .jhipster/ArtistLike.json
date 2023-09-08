@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083754",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "artist_like",
+  "fields": [
+    {
+      "fieldName": "voMember",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArtistLike",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "artist",
+      "otherEntityRelationshipName": "artistlikes",
+      "relationshipName": "artist",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

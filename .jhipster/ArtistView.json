@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083753",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "artist_view",
+  "fields": [
+    {
+      "fieldName": "voMember",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArtistView",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "artist",
+      "otherEntityRelationshipName": "artistviews",
+      "relationshipName": "artist",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

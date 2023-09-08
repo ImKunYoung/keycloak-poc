@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20230908083451",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "jhi_like",
+  "fields": [
+    {
+      "fieldName": "voMember",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Like",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "exhibition",
+      "otherEntityRelationshipName": "likes",
+      "relationshipName": "artwork",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
