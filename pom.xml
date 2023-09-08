@@ -569,7 +569,7 @@
                     <version>${jib-maven-plugin.version}</version>
                     <configuration>
                         <from>
-                            <image>${jib-maven-plugin.image}</image>
+                            <image>ghcr.io/imkunyoung/keycloak-poc</image>
                             <platforms>
                                 <platform>
                                     <architecture>${jib-maven-plugin.architecture}</architecture>
