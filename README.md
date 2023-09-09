@@ -1,3 +1,6 @@
+![image](https://github.com/ImKunYoung/keycloak-poc/assets/46955032/c9db9fc3-9e19-4b15-a5d5-1a34f8818a53)
+
+
 # keycloakpoc
 
 This application was generated using JHipster 7.9.4, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.9.4](https://www.jhipster.tech/documentation-archive/v7.9.4).
